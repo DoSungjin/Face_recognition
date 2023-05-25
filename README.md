@@ -1,52 +1,27 @@
-# Python Template
+# 얼굴 인식 분류기 (Toy-project)
+- 나를 제외한 다른사람은 other로 인식하기 위함
+- 베이스라인 모델로 나와 타인(1인)을 먼저 분류
+- 추후에 나와 타인(다수)를 분류
 
-Template repository for Python project
 
-## 🚀 Features
+# 데이터 셋 만들기 
+- opencv를 이용해서 webcam을 통해 이미지를 생성
+- 저장 형태
+-       \____DATA
+-           \____face
+-               \____{class명(숫자형)}
+-                   \____image_files
 
-### Code Quality
+- 폴더가 총 2개가 생성됩니다.
+- 먼저 0 폴더에 이미지를 생성하는 셀(me)
+- 그 다음 1폴더에 이미지를 생성하는 셀(other)
+- 'q'를 입력하면 이미지 생성이 중단됩니다.
+- 200장을 생성하면 이미지 생성이 중단됩니다.
 
-- black
-- isort
-- flake8
-- editorconfig
 
-### Github Actions
 
-- [release-drafter](https://github.com/release-drafter/release-drafter)
-- Check code quality when PR (`black`, `isort`, `flake8`)
+## 🚀 사용
+- 누군가 집에 강제로 들어오려고 할때, 알람을 연동
+- 자동차 운전자 인식
+- 얼굴 인식 결제
 
-### Other
-
-- Commit template
-- Issue, PR Template
-- Add dummy test code
-- Auto-close stale issue
-
-## 📄 Guideline
-
-### 1. Setup
-
-- precommit, style, pytest, gitmessage, requirements
-
-```bash
-make setup
-```
-
-### 2. Writes your own code! ✏️
-
-Don't forget to update the `README`!
-
-## ⬆️ Contributing
-
-### 1. Test
-
-```bash
-make test
-```
-
-### 2. Execute code formatting & Check lint
-
-```bash
-make style
-```
